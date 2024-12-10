@@ -4,9 +4,9 @@ export const ConverterBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 380px;
-  height: 500px;
-  border-radius: 6px;
+  width: 570px;
+  height: 750px;
+  border-radius: 9px;
   position: relative;
   box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3);
 
@@ -15,18 +15,22 @@ export const ConverterBoxContainer = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100%;
-    padding: 20px;
+    padding: 30px;
+
+    small {
+      font-size: 20px;
+    }
 
     &.converter-area1 {
       background: linear-gradient(to bottom, #ff6666 0%, #ffb3b3 100%);
 
-      border-radius: 6px 6px 0 0;
+      border-radius: 9px 9px 0 0;
       color: white;
 
       .converter-value {
         label {
           background: #ff66662f;
-          padding: 5px;
+          padding: 8px;
           border-radius: 2px;
         }
       }
@@ -34,7 +38,7 @@ export const ConverterBoxContainer = styled.div`
 
     &.converter-area2 {
       background-color: white;
-      border-radius: 0 0 6px 6px;
+      border-radius: 0 0 9px 9px;
       color: #ff6666;
 
       .converter-value {
@@ -51,15 +55,15 @@ export const ConverterBoxContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 15px;
+      gap: 22px;
 
       input {
-        width: 90px;
+        width: 135px;
         border: none;
-        border-bottom: 2px solid white;
+        border-bottom: 3px solid white;
         background: none;
         color: white;
-        font-size: 36px;
+        font-size: 54px;
         font-weight: 600;
         outline: none;
 
@@ -71,7 +75,7 @@ export const ConverterBoxContainer = styled.div`
       }
 
       label {
-        font-size: 18px;
+        font-size: 27px;
         font-weight: 400;
       }
     }
@@ -80,18 +84,18 @@ export const ConverterBoxContainer = styled.div`
   > svg {
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 8px;
     transform: translate(-50%, -50%);
     background-color: white;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
     color: #ff6666;
-    padding: 3px;
+    padding: 5px;
     transition: all 250ms linear;
 
     &:hover {
       cursor: pointer;
-      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
       background-color: #f0f0f0;
       color: #c04c4c;
     }

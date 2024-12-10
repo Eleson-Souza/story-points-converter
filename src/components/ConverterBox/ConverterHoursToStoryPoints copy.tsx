@@ -34,7 +34,7 @@ export const ConverterHoursToStoryPoints: FC<
         </small>
       </div>
 
-      <PiArrowsDownUpBold size={20} onClick={onToggleConvertTo} />
+      <PiArrowsDownUpBold size={30} onClick={onToggleConvertTo} />
 
       <div className="converter-area2">
         <div className="converter-value">
