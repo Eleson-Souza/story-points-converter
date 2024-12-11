@@ -1,5 +1,6 @@
 import { ChangeEvent, FC } from "react";
 import { PiArrowsDownUpBold } from "react-icons/pi";
+import { WORKING_HOURS_PER_DAY } from "../../utils/constants/time";
 
 interface ConverterHoursToStoryPointsProps {
   hours: number;
@@ -11,8 +12,8 @@ interface ConverterHoursToStoryPointsProps {
 export const ConverterHoursToStoryPoints: FC<
   ConverterHoursToStoryPointsProps
 > = ({ hours, storyPoints, onChangeHours, onToggleConvertTo }) => {
-  const daysTotal = Math.floor(hours / 24);
-  const hoursTotal = Math.floor(hours % 24);
+  const daysTotal = Math.floor(hours / WORKING_HOURS_PER_DAY);
+  const hoursTotal = Math.floor(hours % WORKING_HOURS_PER_DAY);
   const minutesTotal = Math.round((hours % 1) * 60);
 
   return (
