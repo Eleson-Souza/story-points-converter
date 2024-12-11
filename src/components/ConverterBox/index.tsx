@@ -2,6 +2,7 @@ import { ConverterBoxContainer } from "./styled";
 import { ChangeEvent, useEffect, useState } from "react";
 import { ConverterStoryPointsToHours } from "./ConverterStoryPointsToHours";
 import { ConverterHoursToStoryPoints } from "./ConverterHoursToStoryPoints copy";
+import { STORY_POINTS_IN_HOURS } from "../../utils/constants/time";
 
 enum ConvertTo {
   HOURS_TO_STORY_POINTS,
@@ -50,11 +51,11 @@ export const ConverterBox = () => {
   }, [storyPoints]);
 
   function calcHoursToStoryPoints(hours: number) {
-    return hours / 4;
+    return hours / STORY_POINTS_IN_HOURS;
   }
 
   function calcStoryPointsToHours(storyPoints: number) {
-    return storyPoints * 4;
+    return storyPoints * STORY_POINTS_IN_HOURS;
   }
 
   function handleToggleConvertTo() {
